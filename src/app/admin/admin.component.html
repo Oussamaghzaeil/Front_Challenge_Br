@@ -1,0 +1,20 @@
+<mat-sidenav-container style="height: 100vh;">
+  <mat-sidenav mode="side" #sidenav opened style="background-color: #1D719D">
+    <div>
+      <h2 class="mx-2" style="color: aliceblue;">Gerenciador de tarefas</h2><br>
+      <h2 class="mx-2" style="color: aliceblue;" routerLink="task">Dashboard</h2><br>
+      <h2 class="mx-2" style="color: aliceblue;" routerLink="new-user">Criar Usuário</h2><br>
+    </div>
+
+
+  </mat-sidenav>
+  <mat-sidenav-content class="bg">
+    <svg (click)="sidenav.toggle()" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
+         fill="#000000">
+      <path d="M0 0h24v24H0z" fill="none"/>
+      <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+    </svg>
+    <div class="px-3">
+    <router-outlet></router-outlet></div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

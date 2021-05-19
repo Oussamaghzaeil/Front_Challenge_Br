@@ -1,0 +1,69 @@
+<div class="d-flex flex-column" style="background-color: rgba(250, 250, 250, 0.699);">
+
+
+    <h2 class="text-center">Criar novo usuário</h2>
+    <form (ngSubmit)="addUser()" [formGroup]="userForm" autocomplete="off">
+        <div class="d-flex flex-row">
+            <mat-label class="mr-auto align-self-center">Nome Completo</mat-label>
+            <input type="text" class="form-control" style="width: unset!important;" placeholder="Nome Completo"
+                formControlName="UserName" required />
+        </div>
+        <br>
+        <div class="d-flex flex-row">
+            <mat-label class="mr-auto align-self-center">Celular</mat-label>
+            <input type="text" class="form-control" style="width: unset!important;" placeholder="Celular"
+                formControlName="Phone" required />
+        </div>
+        <br>
+        <div class="d-flex flex-row">
+            <mat-label class="mr-auto align-self-center">Telefone Fixo</mat-label>
+            <input type="text" class="form-control" style="width: unset!important;" placeholder="Telefone Fixo"
+                formControlName="MobilePhone" />
+        </div>
+        <br>
+        <div class="d-flex flex-row">
+            <mat-label class="mr-auto align-self-center">Data de Nascimento</mat-label>
+            <input type="date" class="form-control" style="width: unset!important;" placeholder="Data de Nascimento"
+                formControlName="Birthdate" />
+        </div>
+        <br>
+        <div class="d-flex flex-row">
+            <mat-label class="mr-auto align-self-center">E-mail</mat-label>
+            <input type="text" class="form-control" style="width: unset!important;" placeholder="E-mail"
+                formControlName="Email" />
+        </div>
+        <br>
+        <div class="d-flex flex-row">
+            <mat-label class="mr-auto align-self-center">Senha</mat-label>
+            <input type="text" class="form-control" style="width: unset!important;" placeholder="Senha"
+                formControlName="Password" />
+        </div>
+        <br>
+        <div class="d-flex flex-row">
+            <mat-label class="mr-auto align-self-center">Endereço</mat-label>
+            <input type="text" class="form-control" style="width: unset!important;" placeholder="Endereço"
+                formControlName="Address" />
+        </div>
+        <br>
+        <div class="d-flex flex-row">
+            <mat-label class="mr-auto align-self-center">Gerente</mat-label>
+            <input type="text" class="form-control" style="width: unset!important;" placeholder="Gerente"
+                formControlName="Manager" />
+        </div>
+        <br>
+        <mat-label class="mr-auto align-self-center">Tipo de Usuário</mat-label>
+        <mat-form-field appearance="fill">
+            <mat-label>Tipo de Usuário</mat-label>
+            <mat-select formControlName="ManagerType">
+                <mat-option value="admin">Admin</mat-option>
+                <mat-option value="nuser">Usuário Normal</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <br>
+        <div class="d-flex flex-row" style="justify-content: space-around;">
+            <button mat-raised-button color="primary" type="submit">Enviar</button>
+            <button mat-raised-button color="primary" type="reset" mat-dialog-close>Cancelar</button>
+        </div>
+
+    </form>
+</div>
